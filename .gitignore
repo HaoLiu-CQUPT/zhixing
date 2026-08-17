@@ -1,0 +1,38 @@
+# Local credentials and overrides
+.env
+.env.*
+!.env.example
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Runtime data produced by the adapter or the third-party kernel
+adapter/runtime/
+*.db
+*.sqlite
+*.sqlite3
+*.log
+*.jsonl
+*.csv
+message_log.txt
+messages_*.csv
+downloaded_images/
+
+# Third-party binaries and download artifacts are never committed
+*.exe
+*.dll
+*.zip
+*.download
+*.partial
+
+# Keep only the reviewed runtime templates
+new-kernel-runtime/*
+!new-kernel-runtime/.gitkeep
+!new-kernel-runtime/trigger_words.json
+
+# IDE and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
