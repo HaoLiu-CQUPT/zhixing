@@ -1,0 +1,8 @@
+{
+  "enabled": false,
+  "target_group_name": "\u793a\u4f8b\u6d4b\u8bd5\u7fa4",
+  "target_group_id_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "message": "\u6b22\u8fce\u52a0\u5165\u793a\u4f8b\u6d4b\u8bd5\u7fa4\uff0c\u8bf7\u9605\u8bfb\u516c\u5f00\u6d4b\u8bd5\u89c4\u5219\u3002",
+  "state_path": "onboarding/state/events.json",
+  "dedupe_retention_seconds": 2592000
+}

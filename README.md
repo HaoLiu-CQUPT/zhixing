@@ -20,10 +20,15 @@
 ## 仓库包含什么
 
 - `adapter/dify_proxy.py`：只监听 `127.0.0.1` 的 Dify Cloud 转发层，不记录问题、答案或 API Key。
+- `onboarding/`：群回答展示、并发上下文隔离、新人欢迎和事件去重的可审阅源码与脱敏测试。
 - `scripts/`：下载校验第三方内核、配置防火墙、启动、停止、状态检查和本地验证脚本。
 - `.env.example`：不含凭证的配置模板。
 - `examples/`：纯虚构测试知识库与验收问题。
 - `new-kernel-runtime/trigger_words.json`：触发词模板。
+- `docs/PROJECT_DEVELOPMENT_RETROSPECTIVE.md`：详细架构、开发过程、故障复盘、运维和交接文档。
+- `docs/RESUME_INTERVIEW_GUIDE.md`：面向 Agent/后端岗位的项目表述与面试复盘指南。
+
+本地适配器同时处理 blocking JSON 和 Dify SSE：先按事件语义合并回答，再移除 `<think>`、reasoning comment 和常见 Markdown 展示痕迹，避免把内部推理直接发送到群里。相关回归测试位于 `tests/`。
 
 仓库明确不包含 `.env`、Dify/模型供应商 Key、聊天记录、群/成员标识、SQLite 数据库、日志、企微安装包、内核二进制、FFmpeg 或上游发布包。原因和校验值见 [THIRD_PARTY.md](THIRD_PARTY.md)。
 
