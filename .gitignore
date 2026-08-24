@@ -9,6 +9,8 @@ __pycache__/
 
 # Runtime data produced by the adapter or the third-party kernel
 adapter/runtime/
+onboarding/config.json
+onboarding/state/
 *.db
 *.sqlite
 *.sqlite3
